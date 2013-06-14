@@ -48,16 +48,17 @@ CURL_CFILES = \
 	tool_writeout.c \
 	tool_xattr.c
 
-LOCAL_SRC_FILES := $(CURLX_ONES) $(CURL_CFILES)
+LOCAL_SRC_FILES := $(CURL_CFILES) $(CURLX_ONES)
 
 LOCAL_CFLAGS := -DHAVE_CONFIG_H
 
 LOCAL_C_INCLUDES := \
 		$(LOCAL_PATH)/../include \
 		$(LOCAL_PATH)/../lib \
+		$(LOCAL_PATH)/../../openssl/include \
 		$(LOCAL_PATH)/../../zlib
 
-LOCAL_SHARED_LIBRARIES := libcurl libz
+LOCAL_SHARED_LIBRARIES := libcurl libssl libcrypto libz
 
 LOCAL_MODULE := curl
 LOCAL_MODULE_TAGS := eng

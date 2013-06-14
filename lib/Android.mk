@@ -41,9 +41,10 @@ LOCAL_CFLAGS := -DHAVE_CONFIG_H
 
 LOCAL_C_INCLUDES := \
 	$(LOCAL_PATH)/../include \
+	$(LOCAL_PATH)/../../openssl/include \
 	$(LOCAL_PATH)/../../zlib
 
-LOCAL_SHARED_LIBRARIES := libz
+LOCAL_SHARED_LIBRARIES := libssl libcrypto libz
 
 #LOCAL_CFLAGS += -DBUILDING_LIBCURL -DCURL_HIDDEN_SYMBOLS
 
