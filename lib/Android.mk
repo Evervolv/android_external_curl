@@ -52,3 +52,12 @@ LOCAL_MODULE := libcurl
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE_TAGS := eng
+LOCAL_MODULE := ca-bundle
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/security
+LOCAL_MODULE_SUFFIX := .crt
+LOCAL_SRC_FILES := ca-bundle.crt
+include $(BUILD_PREBUILT)
