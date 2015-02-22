@@ -22,14 +22,14 @@
  *
  ***************************************************************************/
 
-#include "curl_setup.h"
+#include "../curl_setup.h"
 
 #ifdef USE_SSLEAY
 /*
  * This header should only be needed to get included by vtls.c and openssl.c
  */
 
-#include "urldata.h"
+#include "../urldata.h"
 
 CURLcode Curl_ossl_connect(struct connectdata *conn, int sockindex);
 CURLcode Curl_ossl_connect_nonblocking(struct connectdata *conn,
