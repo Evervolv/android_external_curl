@@ -85,7 +85,7 @@ LOCAL_SHARED_LIBRARIES := libssl libcrypto libz
 LOCAL_SYSTEM_SHARED_LIBRARIES := libc
 
 LOCAL_MODULE:= libcurl
-LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_TAGS := eng
 
 include $(BUILD_SHARED_LIBRARY)
 
